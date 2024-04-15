@@ -5,7 +5,10 @@
       "firstName": "John",
       "age": 30,
       "companyId": "1",
-      "users": ["2", "3"]
+      "users": [
+        "2",
+        "3"
+      ]
     },
     {
       "id": "2",
@@ -21,8 +24,20 @@
       "companyId": "1",
       "users": []
     },
-    { "id": "4", "firstName": "Bob", "age": 40, "companyId": "3", "users": [] },
-    { "id": "5", "firstName": "Eva", "age": 28, "companyId": "2", "users": [] },
+    {
+      "id": "4",
+      "firstName": "Bob",
+      "age": 40,
+      "companyId": "3",
+      "users": []
+    },
+    {
+      "id": "5",
+      "firstName": "Eva",
+      "age": 28,
+      "companyId": "2",
+      "users": []
+    },
     {
       "id": "6",
       "firstName": "Michael",
@@ -67,10 +82,14 @@
     },
     {
       "id": "12",
-      "firstName": "Oliver",
+      "firstName": "viky",
       "age": 26,
-      "companyId": "3",
-      "users": []
+      "companyId": "2"
+    },
+    {
+      "firstName": "viky",
+      "age": 21,
+      "id": "NYnm_JE"
     }
   ],
   "companies": [

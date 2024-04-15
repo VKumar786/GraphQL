@@ -5,7 +5,7 @@ fields: () => ({})
 
 npm i --save express express-graphql graphql lodash
 
-# query
+# GET query
 
 {
   user(id: "1") {
@@ -127,3 +127,38 @@ fragment userDetails on User {
   firstName
   age
 }
+
+# CREATE query
+
+mutation {
+  addUser(firstName: "viky", age: 21) {
+    id
+    firstName
+    age
+  }
+}
+
+# DELETE query
+
+mutation {
+  deleteUser(id: "21") {
+    id
+    firstName
+    age
+  }
+}
+
+# EDIT query
+
+mutation {
+  editUser(id:"12", firstName: "viky", companyId: "2") {
+    id
+    firstName
+    age
+  }
+}
+
+# Difference between PUT & PATCH
+
+PUT -> Replace document with new one
+PATCH -> Replace particular attribute

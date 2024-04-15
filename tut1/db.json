@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "age": 30,
+      "companyId": "1",
+      "users": ["2", "3"]
+    },
+    {
+      "id": "2",
+      "firstName": "Jane",
+      "age": 25,
+      "companyId": "2",
+      "users": []
+    },
+    {
+      "id": "3",
+      "firstName": "Alice",
+      "age": 35,
+      "companyId": "1",
+      "users": []
+    },
+    { "id": "4", "firstName": "Bob", "age": 40, "companyId": "3", "users": [] },
+    { "id": "5", "firstName": "Eva", "age": 28, "companyId": "2", "users": [] },
+    {
+      "id": "6",
+      "firstName": "Michael",
+      "age": 45,
+      "companyId": "3",
+      "users": []
+    },
+    {
+      "id": "7",
+      "firstName": "Sophia",
+      "age": 32,
+      "companyId": "1",
+      "users": []
+    },
+    {
+      "id": "8",
+      "firstName": "David",
+      "age": 27,
+      "companyId": "2",
+      "users": []
+    },
+    {
+      "id": "9",
+      "firstName": "Emily",
+      "age": 22,
+      "companyId": "1",
+      "users": []
+    },
+    {
+      "id": "10",
+      "firstName": "Daniel",
+      "age": 38,
+      "companyId": "3",
+      "users": []
+    },
+    {
+      "id": "11",
+      "firstName": "Grace",
+      "age": 31,
+      "companyId": "2",
+      "users": []
+    },
+    {
+      "id": "12",
+      "firstName": "Oliver",
+      "age": 26,
+      "companyId": "3",
+      "users": []
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "GCC",
+      "description": "GNU Compiler Collection (GCC) is a compiler system produced by the GNU Project supporting various programming languages."
+    },
+    {
+      "id": "2",
+      "name": "Clang",
+      "description": "Clang is a compiler front end for the C, C++, Objective-C, and Objective-C++ programming languages."
+    },
+    {
+      "id": "3",
+      "name": "Visual C++",
+      "description": "Visual C++ is the C++ development environment and compiler tools provided by Microsoft in the Visual Studio suite."
+    },
+    {
+      "id": "4",
+      "name": "GCC for ARM",
+      "description": "GCC compiler optimized for ARM architecture, commonly used in embedded systems and mobile devices."
+    },
+    {
+      "id": "5",
+      "name": "LLVM",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies."
+    }
+  ]
+}

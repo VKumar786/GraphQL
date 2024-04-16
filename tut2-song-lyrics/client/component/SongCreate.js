@@ -2,6 +2,7 @@ import React from "react";
 import gpl from "graphql-tag";
 import { graphql } from "react-apollo";
 import { Link, hashHistory } from "react-router";
+import fetchSongs from "../queries/fetchSongs";
 
 const SongCreate = (props) => {
   const onSubmit = (event) => {
@@ -15,6 +16,8 @@ const SongCreate = (props) => {
     props
       .mutate({
         variables: { title },
+        refetchQueries: [{ query: fetchSongs }],
+        // refetchQueries: [{ query: fetchSongs, variables: { id: 1 }],
       })
       .then(() => hashHistory.push("/"));
   };

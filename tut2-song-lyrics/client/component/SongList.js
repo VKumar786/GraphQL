@@ -2,28 +2,42 @@ import React from "react";
 import gpl from "graphql-tag";
 import { graphql } from "react-apollo";
 import { Link } from "react-router";
-
-const query = gpl`
-{
-    songs {
-        id
-        title
-    }
-}
-`;
+import fetchSongs from "../queries/fetchSongs";
 
 const SongList = (props) => {
-  console.warn(props);
+  const handleDelete = (id) => {
+    props
+      .mutate({
+        variables: { id },
+      })
+      .then(() => props.data.refetch());
+  };
   return (
-    <div>
+    <div style={{ margin: "3rem auto" }}>
       <div className="collection">
         {props &&
           props.data &&
           props.data.songs &&
           props.data.songs.map((song) => {
+            const { id, title } = song;
             return (
-              <div key={song.id + song.title} className="collection-item">
-                <a href={`/${song.id}`}>{song.title}</a>
+              <div
+                key={id + title}
+                className="collection-item"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link href={`/#/${id}`}>{title}</Link>
+
+                <i
+                  className="material-icons"
+                  style={{ color: "red", cursor: "pointer" }}
+                  onClick={() => handleDelete(id)}
+                >
+                  delete
+                </i>
               </div>
             );
           })}
@@ -36,4 +50,12 @@ const SongList = (props) => {
   );
 };
 
-export default graphql(query)(SongList);
+const deleteMutation = gpl`
+  mutation deleteSong($id: ID) {
+    deleteSong(id: $id) {
+      id
+    }
+  }
+`;
+
+export default graphql(deleteMutation)(graphql(fetchSongs)(SongList));
